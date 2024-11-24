@@ -1,7 +1,5 @@
+import style from "./style.module.css";
+
 export default function Movies() {
-  return (
-    <div>
-      <div className="bg-red-500">{"سینما برای همه"}</div>
-    </div>
-  );
+  return <div className={style.parent}>{"سینما برای همه"}</div>;
 }

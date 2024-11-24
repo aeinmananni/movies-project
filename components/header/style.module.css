@@ -1,0 +1,3 @@
+.sp {
+  @apply bg-purple-900 h-full w-1/6  sm:w-1/12 flex justify-center items-center ;
+}
