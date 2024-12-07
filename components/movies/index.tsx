@@ -1,5 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { MoviesType } from "@/pages/models/models";
-import moveImage from "@/public/images/poster1-johnWick.jpg";
 import Cart from "./cart";
 const getMovies = async () => {
   try {
@@ -15,11 +15,14 @@ export default async function Movies() {
   const state: MoviesType[] = await getMovies();
   return (
     <div className="p-2 grid grid-cols-4 gap-2">
-      <Cart imageSrc={moveImage} />
-
-      {/* {state.map((it, index) => (
-        <span key={index}>{it.movieName}</span>
-      ))} */}
+      {state.map((it, index) => (
+        <Cart
+          key={index}
+          width={400}
+          height={400}
+          imageSrc={`http://localhost:3000/api/get-images/${it.movieImage}`}
+        />
+      ))}
     </div>
   );
 }

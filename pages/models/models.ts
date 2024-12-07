@@ -8,6 +8,7 @@
 
 export type MoviesType = {
      movieId:number
+     movieImage:string,
      movieName:string,
      movieGenre:string
      movieIMDB:string,
